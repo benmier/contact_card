@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Functions</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+	    $(document).ready(function(){
+	    	$('form').submit(function(){
+	    		$('#cards').append('<div class="new_card"><h2>'+$("#first_name").val()+" "+$("#last_name").val()+'</h2><p style="display: none">'+$("#description").val()+'</p><p>(Click for description)');
+	    		$("#add_user_form").trigger('reset');
+	    		return false;
+	        	});
+	    	$(document).on("click",".new_card",function(){
+	    		$("p",this).toggle();
+	    		$("h2",this).toggle();
+	    	});
+	    });
+    </script>
+</head>
+<body>
+	<div id="form1">
+		<form id="add_user_form">
+			<label>First Name: </label>
+			<input id="first_name" type="text" name="first_name" placeholder="First Name"><br>
+			<label>Last Name: </label>
+			<input id="last_name" type="text" name="last_name" placeholder="Last Name"><br><br><br><br>
+			<label>Description: </label><br>
+			<textarea id="description" name="description" placeholder="Enter description:" rows="4"></textarea><br>
+			<input id="add_user" type="submit" value="Add User">
+		</form>
+	</div>
+	<div id="cards"></div>
+</body>
+</html>

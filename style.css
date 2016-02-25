@@ -1,0 +1,38 @@
+#form1{
+	width: 250px;
+	display: inline-block;
+}
+input{
+	margin: 0px 0px 5px 5px;
+	float: right;
+}
+label{
+	float: left;
+	margin-bottom: 8px;
+
+}
+form{
+	width: 260px;
+}
+textarea{
+	margin: 0px 30px 5px 0px;
+	width: 260px;
+}
+#add_user{
+	float: left;
+	margin: 0px;
+}
+#cards{
+	vertical-align: top;
+	margin-left: 100px;
+	width: 280px;
+	height: 700px;
+	display: inline-block;
+}
+.new_card{
+	border: 1px black solid;
+	text-align: center;
+	vertical-align: middle;
+	height: 100px;
+	margin-bottom: 10px;
+}
